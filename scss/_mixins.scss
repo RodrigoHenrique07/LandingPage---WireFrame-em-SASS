@@ -1,0 +1,89 @@
+@mixin responsivo($screenWidth) {
+    @media(max-width: $screenWidth) {
+        @content
+    }
+
+};
+
+
+@mixin flex($align, $justify, $direction) {
+    display: flex;
+    align-items: $align ;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin style-menu ($display,$height ,$bg, $colorText) {
+
+    display: $display;
+    background-color: $bg;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.5rem;
+    line-height: 105%;
+    letter-spacing: -0.01em;
+    color: $colorText;
+    height: $height;
+    width: 12.8rem;
+    transition: all 0.3s;
+    
+   &:hover {
+    background-color: #ACB4BF;
+    color: $white-colors ;
+
+   }
+}
+
+@mixin style-btn ($bg, $colorText) {
+    font-family: 'Sora' sans-serif;
+    display: inline-block;
+    background-color: $bg;
+    color: $colorText;
+    padding: 1.2rem 3.4rem;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    
+    transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+    
+}
+
+@mixin style-fonte($size, $colorText) {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    line-height: 125%;
+    letter-spacing: -1px;
+    color: $colorText;
+    font-size: $size;
+}
+
+@mixin style-card ($bg) {
+    width: 100%;
+    max-width: 38.4rem;
+    height: 38.2rem;
+    background-color: $bg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6.4rem;
+
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+@mixin style-img {
+    width: 17.6rem;
+    height: 11.2rem;
+    background-color: $gray-colors-200;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+

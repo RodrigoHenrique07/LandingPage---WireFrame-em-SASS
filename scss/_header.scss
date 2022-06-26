@@ -1,0 +1,68 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8.8rem;
+    background-color: $gray-colors-800;
+    display: flex;
+    z-index: 2021;
+    
+
+    .container {
+        @include flex(center, space-between, row);
+
+        nav {
+            @include flex(center, space-between, row);
+            
+            ul {
+                display: flex;
+                margin-right: 3.2rem;
+                
+                li {
+                    margin-left: 3.2rem;
+                    
+                }
+
+                .menu-item {
+                    @include style-menu(inline-block, 4rem, $gray-colors-50, $gray-colors-400);
+                }
+            }
+
+            .btn-primery {
+                @include style-btn ($brand-colors-pink, $gray-colors-100);
+                padding: 0.9rem 3.4rem;
+            }
+
+            
+    }
+
+    .menu-mobile {
+        
+        width: 100%;
+        max-width: 14rem;
+        @include style-menu(none, 4.5rem, $gray-colors-50, $gray-colors-400)
+        
+        
+    }
+
+    @include responsivo(991px) {
+        nav {
+            display: none;
+        }
+
+        .menu-item {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    @include responsivo (480px) {
+        .logo {
+            max-width: 13rem;
+        }
+    }
+    
+}
+
+
+}
