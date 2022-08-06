@@ -1,4 +1,4 @@
-# LangPage---WireFrame-em-SASS 👨‍🚀
+# LandingPage---WireFrame-em-SASS 👨‍🚀
 
 ## Descrição do projeto
 Projeto multiplos cards responsivo 
